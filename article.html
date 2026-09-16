@@ -1,61 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Essay | Chinmaya Patro's Policy Corner</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Essay | Chinmaya Patro's Policy Corner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="site-shell">
-    <header class="article-masthead">
-      <a href="index.html" class="article-brand">CP <span>Chinmaya Patro's Policy Corner</span></a>
-      <a href="index.html" class="back-link">← Essays</a>
-    </header>
 
-    <main class="article-page">
-      <div class="meta-header" id="article-meta"></div>
-      <h1 id="article-title"></h1>
-      <div class="article-rule"></div>
-      <img id="article-hero-image" class="article-hero-image" alt="" hidden>
-      <div class="article-body" id="article-content"></div>
-    </main>
+<div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
 
-    <footer class="site-footer">
-      <strong>Chinmaya Patro's Policy Corner</strong>
-      <a href="index.html">Return to the reading room →</a>
-    </footer>
+<div class="ambient" aria-hidden="true">
+  <span class="ambient-blob blob-1"></span>
+  <span class="ambient-blob blob-2"></span>
+</div>
+
+<header class="article-masthead">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">CP</span>
+      <span class="brand-copy">
+        <strong>Chinmaya Patro</strong>
+        <em>Policy Corner</em>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html#topics">← All essays</a>
+    </nav>
   </div>
+</header>
 
-  <script src="js/data.js"></script>
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const articleId = params.get('id');
-    const post = articles.find(a => a.id === articleId);
+<main class="article-page">
+  <div class="meta-header" id="article-meta"></div>
+  <h1 id="article-title"></h1>
+  <div class="article-rule"></div>
+  <img id="article-hero-image" class="article-hero-image" alt="" hidden>
+  <div class="article-body" id="article-content"></div>
 
-    if (post) {
-      document.title = `${post.title} | Chinmaya Patro's Policy Corner`;
-      document.getElementById('article-meta').innerHTML = `
-        <span class="meta-topic">${post.topicLabel}</span>
-        <span>•</span>
-        <span>${post.date}</span>
-        <span>•</span>
-        <span>${post.readingTime}</span>
-      `;
-      document.getElementById('article-title').textContent = post.title;
+  <section class="related" id="related-block" hidden>
+    <h3>More in this topic</h3>
+    <div class="related-grid" id="related-grid"></div>
+  </section>
+</main>
 
-      if (post.image) {
-        const heroImg = document.getElementById('article-hero-image');
-        heroImg.src = post.image;
-        heroImg.alt = post.imageAlt || '';
-        heroImg.hidden = false;
-      }
+<footer class="site-footer">
+  <div class="shell footer-base" style="border-top:0;">
+    <span>© <span id="year">2026</span> Chinmaya Patro. All essays are the author's own.</span>
+    <a class="back-link" href="index.html#topics">Return to the reading room →</a>
+  </div>
+</footer>
 
-      document.getElementById('article-content').innerHTML = post.content;
-    } else {
-      document.getElementById('article-title').textContent = "Essay Not Found";
-      document.getElementById('article-content').innerHTML = "<p>The requested essay could not be located.</p>";
-    }
-  </script>
+<script src="js/data.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  var progressBar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', function () {
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - doc.clientHeight;
+    progressBar.style.width = (max > 0 ? (doc.scrollTop / max) * 100 : 0) + '%';
+  }, { passive: true });
+
+  if (typeof articles === 'undefined' || !Array.isArray(articles)) {
+    document.getElementById('article-title').textContent = 'Essays unavailable';
+    document.getElementById('article-content').innerHTML =
+      '<p>The essay data file could not be loaded. Check that <code>js/data.js</code> exists.</p>';
+    return;
+  }
+
+  var params    = new URLSearchParams(window.location.search);
+  var articleId = params.get('id');
+  var post      = articles.find(function (a) { return a.id === articleId; });
+
+  if (!post) {
+    document.getElementById('article-title').textContent = 'Essay Not Found';
+    document.getElementById('article-content').innerHTML =
+      '<p>The requested essay could not be located. <a href="index.html#topics">Return to the archive →</a></p>';
+    return;
+  }
+
+  document.title = post.title + " | Chinmaya Patro's Policy Corner";
+
+  document.getElementById('article-meta').innerHTML =
+    '<span class="meta-topic">' + post.topicLabel + '</span>' +
+    '<span class="meta-dot">•</span><span>' + post.date + '</span>' +
+    '<span class="meta-dot">•</span><span>' + post.readingTime + '</span>';
+
+  document.getElementById('article-title').textContent = post.title;
+
+  if (post.image) {
+    var heroImg = document.getElementById('article-hero-image');
+    heroImg.src = post.image;
+    heroImg.alt = post.imageAlt || '';
+    heroImg.hidden = false;
+  }
+
+  document.getElementById('article-content').innerHTML = post.content;
+
+  // Related essays from the same topic
+  var related = articles.filter(function (a) {
+    return a.topic === post.topic && a.id !== post.id;
+  }).slice(0, 3);
+
+  if (related.length) {
+    document.getElementById('related-block').hidden = false;
+    document.getElementById('related-grid').innerHTML = related.map(function (a) {
+      return '<a class="related-item" href="article.html?id=' + encodeURIComponent(a.id) + '">' +
+             '<strong>' + a.title + '</strong>' +
+             '<span>' + a.topicLabel + ' · ' + a.readingTime + '</span></a>';
+    }).join('');
+  }
+})();
+</script>
 </body>
 </html>
