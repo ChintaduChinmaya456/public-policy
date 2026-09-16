@@ -17,6 +17,7 @@
       <div class="meta-header" id="article-meta"></div>
       <h1 id="article-title"></h1>
       <div class="article-rule"></div>
+      <img id="article-hero-image" class="article-hero-image" alt="" hidden>
       <div class="article-body" id="article-content"></div>
     </main>
 
@@ -26,7 +27,7 @@
     </footer>
   </div>
 
-  <script src="js/articles-data.js"></script>
+  <script src="js/data.js"></script>
   <script>
     const params = new URLSearchParams(window.location.search);
     const articleId = params.get('id');
@@ -42,6 +43,14 @@
         <span>${post.readingTime}</span>
       `;
       document.getElementById('article-title').textContent = post.title;
+
+      if (post.image) {
+        const heroImg = document.getElementById('article-hero-image');
+        heroImg.src = post.image;
+        heroImg.alt = post.imageAlt || '';
+        heroImg.hidden = false;
+      }
+
       document.getElementById('article-content').innerHTML = post.content;
     } else {
       document.getElementById('article-title').textContent = "Essay Not Found";
