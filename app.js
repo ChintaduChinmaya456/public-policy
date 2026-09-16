@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       <article class="article-card" style="--delay: ${Math.min(indexInTopic * 60, 420)}ms">
         <div class="article-index">${String(indexInTopic + 1).padStart(2, '0')}</div>
         <div class="article-card-main">
+        ${item.image ? `<img class="article-thumb" src="${item.image}" alt="${item.imageAlt || ''}">` : ''}
           <div class="meta-header">
             <span class="meta-topic">${item.topicLabel}</span>
             <span class="meta-dot">•</span>
