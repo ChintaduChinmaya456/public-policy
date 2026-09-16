@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Article — Patro's Policy Parley</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essay | Chinmaya Patro's Policy Corner</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <a href="index.html" class="back-link">← Back to Patro's Policy Parley</a>
-      <span class="topbar-tagline">Independent · Non-partisan · Evidence-based</span>
-    </div>
+  <div class="site-shell">
+    <header class="article-masthead">
+      <a href="index.html" class="article-brand">CP <span>Chinmaya Patro's Policy Corner</span></a>
+      <a href="index.html" class="back-link">← Essays</a>
+    </header>
+
+    <main class="article-page">
+      <div class="meta-header" id="article-meta"></div>
+      <h1 id="article-title"></h1>
+      <div class="article-rule"></div>
+      <div class="article-body" id="article-content"></div>
+    </main>
+
+    <footer class="site-footer">
+      <strong>Chinmaya Patro's Policy Corner</strong>
+      <a href="index.html">Return to the reading room →</a>
+    </footer>
   </div>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <span class="brand-mark">PP</span>
-        <span class="brand-name">Patro's Policy Parley</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#research">Research</a>
-        <a href="index.html#articles">Articles</a>
-        <a href="index.html#about">About</a>
-      </nav>
-    </div>
-  </header>
+  <script src="js/articles-data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const articleId = params.get('id');
+    const post = articles.find(a => a.id === articleId);
 
-  <article class="article-page" id="articlePage">
-    <!-- Populated by app.js -->
-  </article>
-
-  <section class="section section-alt" id="relatedWrap" style="display:none;">
-    <div class="container">
-      <div class="section-head"><h2>Related Reading</h2></div>
-      <div class="article-grid" id="relatedGrid"></div>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> Patro's Policy Parley. All views are personal.</span>
-      <span>Hosted on GitHub Pages.</span>
-    </div>
-  </footer>
-
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+    if (post) {
+      document.title = `${post.title} | Chinmaya Patro's Policy Corner`;
+      document.getElementById('article-meta').innerHTML = `
+        <span class="meta-topic">${post.topicLabel}</span>
+        <span>•</span>
+        <span>${post.date}</span>
+        <span>•</span>
+        <span>${post.readingTime}</span>
+      `;
+      document.getElementById('article-title').textContent = post.title;
+      document.getElementById('article-content').innerHTML = post.content;
+    } else {
+      document.getElementById('article-title').textContent = "Essay Not Found";
+      document.getElementById('article-content').innerHTML = "<p>The requested essay could not be located.</p>";
+    }
+  </script>
 </body>
 </html>
