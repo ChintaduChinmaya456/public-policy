@@ -658,6 +658,26 @@ input {
   font-weight: 600;
 }
 
+/* ---------------- Topic groups ---------------- */
+
+.topic-group {
+  margin-top: 56px;
+}
+
+.topic-group:first-of-type {
+  margin-top: 44px;
+}
+
+.topic-group-title {
+  margin-bottom: 6px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--green-line);
+  color: var(--green-dark);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
 /* ---------------- Footer ---------------- */
 
 .site-footer {
