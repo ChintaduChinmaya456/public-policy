@@ -1,171 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Patro's Policy Parley — Independent Policy Research & Commentary</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Chinmaya Patro's Policy Corner — essays and ideas on policy, society, culture, ecology and global affairs.">
+  <title>Chinmaya Patro's Policy Corner</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <!-- Top Bar -->
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span class="topbar-date" id="topbarDate"></span>
-      <span class="topbar-tagline">Independent · Non-partisan · Evidence-based</span>
-    </div>
+  <div class="site-shell">
+
+    <header class="masthead">
+      <div class="brand-mark" aria-hidden="true">CP</div>
+      <div class="brand-copy">
+        <p class="eyebrow">Independent Ideas &amp; Policy</p>
+        <h1>Chinmaya Patro's <span>Policy Corner</span></h1>
+        <p class="tagline">Essays on policy, society, culture, ecology &amp; strategic affairs.</p>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="#about">About</a>
+      <a href="#essays">Essays</a>
+      <a href="#topics">Topics</a>
+    </nav>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="section-kicker">THE POLICY CORNER</p>
+          <h2 id="hero-title">Ideas worth <em>thinking</em> about.</h2>
+          <p class="hero-lede">
+            A growing collection of essays that looks beyond headlines to examine institutions,
+            ideas, people, places and the forces shaping public life.
+          </p>
+          <a class="hero-cta" href="#essays">Explore the essays <span>↗</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="sun"></div>
+          <div class="dot dot-a"></div>
+          <div class="dot dot-b"></div>
+          <div class="dot dot-c"></div>
+        </div>
+      </section>
+
+      <section class="about-section" id="about" aria-labelledby="about-title">
+        <div class="section-heading">
+          <p class="section-kicker">ABOUT</p>
+          <h2 id="about-title">A corner for <span>curious minds.</span></h2>
+        </div>
+        <div class="about-grid">
+          <p class="about-lede">
+            <strong>Chinmaya Patro's Policy Corner</strong> is a space for thoughtful essays,
+            questions and conversations about the public world.
+          </p>
+          <div class="about-text">
+            <p>
+              The collection brings together policy, history, geography, climate, society,
+              international affairs, economics, ethics and literature in one accessible reading room.
+            </p>
+            <p>
+              Use the topic tags below to browse by theme, or search across the collection for a
+              particular idea, argument or keyword.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="essays-section" id="essays" aria-labelledby="essays-title">
+        <div class="section-heading essays-heading">
+          <div>
+            <p class="section-kicker">ESSAYS</p>
+            <h2 id="essays-title">The reading room.</h2>
+          </div>
+          <span class="essay-count" id="essay-count" aria-live="polite"></span>
+        </div>
+
+        <div class="topic-area" id="topics">
+          <div class="topic-label">Browse by topic</div>
+          <nav class="topic-nav" id="topic-filters" aria-label="Essay topics">
+            <button class="topic-btn active" data-topic="all">All</button>
+            <button class="topic-btn" data-topic="law">Law</button>
+            <button class="topic-btn" data-topic="environment">Environment</button>
+            <button class="topic-btn" data-topic="politics">Politics</button>
+            <button class="topic-btn" data-topic="society">Society</button>
+            <button class="topic-btn" data-topic="history-culture">History &amp; Culture</button>
+            <button class="topic-btn" data-topic="geography">Geography</button>
+            <button class="topic-btn" data-topic="environment-climate">Environment &amp; Climate Issues</button>
+            <button class="topic-btn" data-topic="social-change">Social Change</button>
+            <button class="topic-btn" data-topic="international-affairs">International Affairs</button>
+            <button class="topic-btn" data-topic="indian-politics">Indian Politics</button>
+            <button class="topic-btn" data-topic="business-economy">Business &amp; Economy</button>
+            <button class="topic-btn" data-topic="ethics-philosophy">Ethics &amp; Philosophy</button>
+            <button class="topic-btn" data-topic="books-literature">Books &amp; Literature</button>
+          </nav>
+        </div>
+
+        <div class="search-container">
+          <label class="search-label" for="search-box">Search the archive</label>
+          <div class="search-wrap">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input type="search" id="search-box" class="search-input" placeholder="Search by title, topic or keyword..." autocomplete="off">
+            <kbd>/</kbd>
+          </div>
+        </div>
+
+        <main class="article-grid" id="article-list" aria-live="polite">
+          <!-- Dynamic cards rendered by JS -->
+        </main>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Chinmaya Patro's Policy Corner</strong>
+        <span>Ideas, essays &amp; public questions.</span>
+      </div>
+      <a href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Back to top ↑</a>
+    </footer>
   </div>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="brand">
-        <span class="brand-mark">PP</span>
-        <span class="brand-name">Patro's Policy Parley</span>
-      </a>
-      <nav class="main-nav">
-        <a href="index.html">Home</a>
-        <a href="index.html#research">Research</a>
-        <a href="index.html#articles">Articles</a>
-        <a href="index.html#topics">Topics</a>
-        <a href="index.html#about">About</a>
-      </nav>
-      <a href="index.html#subscribe" class="btn-subscribe">Subscribe</a>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <span class="eyebrow">Featured Analysis</span>
-        <h1 id="heroTitle">Loading…</h1>
-        <p id="heroExcerpt" class="hero-excerpt"></p>
-        <div class="hero-meta" id="heroMeta"></div>
-        <a id="heroLink" href="#" class="btn-primary">Read the analysis →</a>
-      </div>
-      <div class="hero-image">
-        <img id="heroImage" src="" alt="Featured article cover" />
-      </div>
-    </div>
-  </section>
-
-  <!-- Research Areas -->
-  <section id="research" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Research Areas</h2>
-        <p>Thematic clusters guiding our inquiry.</p>
-      </div>
-      <div class="topics-grid" id="topicsGrid"></div>
-    </div>
-  </section>
-
-  <!-- Latest Articles -->
-  <section id="articles" class="section section-alt">
-    <div class="container">
-      <div class="section-head">
-        <h2>Latest Articles</h2>
-        <p>Recent commentary and analysis from our contributors.</p>
-      </div>
-      <div class="article-grid" id="articleGrid"></div>
-    </div>
-  </section>
-
-  <!-- Topics Tags -->
-  <section id="topics" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Browse by Topic</h2>
-      </div>
-      <div class="tag-cloud" id="tagCloud"></div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section section-alt">
-    <div class="container about-grid">
-      <div class="about-photo">
-        <img src="https://images.unsplash.com/photo-1633332757620-1fd1f9ff0f5b?w=600&q=80" alt="Chinmaya Patro" />
-      </div>
-      <div class="about-text">
-        <span class="eyebrow">About the Founder</span>
-        <h2>Chinmaya Patro</h2>
-        <p class="about-lede">Student of Geography, Delhi University · Public policy enthusiast.</p>
-        <p>
-          Chinmaya Patro is an undergraduate student at the <strong>University of Delhi</strong>,
-          pursuing a Bachelor's degree in <strong>Geography</strong>. His academic grounding in
-          spatial systems, urban morphology, and human-environment interactions informs a
-          deep interest in <strong>public policy</strong> — particularly the intersection of
-          territorial planning, welfare delivery, and environmental governance.
-        </p>
-        <p>
-          Patro's Policy Parley is his attempt to translate classroom curiosity into accessible,
-          evidence-driven commentary. The platform publishes short analytical essays, policy
-          briefs, and reviews on issues spanning urban reform, climate adaptation, federal
-          fiscal architecture, and digital governance — with an emphasis on clarity over jargon
-          and inquiry over ideology.
-        </p>
-        <div class="about-links">
-          <a href="mailto:chinmaya@example.com">Email</a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Subscribe -->
-  <section id="subscribe" class="subscribe">
-    <div class="container subscribe-inner">
-      <h2>Get the weekly briefing</h2>
-      <p>One email every Friday. New analysis, curated readings, no spam.</p>
-      <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thanks! This is a static demo form.');">
-        <input type="email" placeholder="you@example.com" required />
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <div class="brand">
-          <span class="brand-mark">PP</span>
-          <span class="brand-name">Patro's Policy Parley</span>
-        </div>
-        <p class="footer-blurb">Independent policy research and commentary from Delhi, India.</p>
-      </div>
-      <div>
-        <h4>Sections</h4>
-        <a href="index.html#research">Research</a>
-        <a href="index.html#articles">Articles</a>
-        <a href="index.html#about">About</a>
-      </div>
-      <div>
-        <h4>Topics</h4>
-        <a href="index.html#topics">Urban Policy</a>
-        <a href="index.html#topics">Climate</a>
-        <a href="index.html#topics">Governance</a>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <a href="#">Email</a>
-        <a href="#">RSS</a>
-        <a href="#">Twitter / X</a>
-      </div>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> Patro's Policy Parley. All views are personal.</span>
-      <span>Hosted on GitHub Pages.</span>
-    </div>
-  </footer>
-
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="js/articles-data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
