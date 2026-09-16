@@ -1,128 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Chinmaya Patro's Policy Corner — essays and ideas on policy, society, culture, ecology and global affairs.">
-  <title>Chinmaya Patro's Policy Corner</title>
-  <link rel="stylesheet" href="css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chinmaya Patro's Policy Corner</title>
+<meta name="description" content="Chinmaya Patro's Policy Corner — essays and ideas on policy, society, culture, ecology and global affairs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <div class="site-shell">
+<body id="top">
 
-    <header class="masthead">
-      <div class="brand-mark" aria-hidden="true">CP</div>
-      <div class="brand-copy">
-        <p class="eyebrow">Independent Ideas &amp; Policy</p>
-        <h1>Chinmaya Patro's <span>Policy Corner</span></h1>
-        <p class="tagline">Essays on policy, society, culture, ecology &amp; strategic affairs.</p>
-      </div>
-    </header>
+<div class="site-shell">
+  <header class="masthead">
+    <div class="brand-mark">CP</div>
+    <div class="brand-copy">
+      <p class="eyebrow">Independent Ideas &amp; Policy</p>
+      <h1>Chinmaya Patro's <span>Policy Corner</span></h1>
+      <p class="tagline">Essays on policy, society, culture, ecology &amp; strategic affairs.</p>
+    </div>
+  </header>
 
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="#about">About</a>
-      <a href="#essays">Essays</a>
-      <a href="#topics">Topics</a>
-    </nav>
+  <nav class="site-nav">
+    <a href="#about">About</a>
+    <a href="#essays">Essays</a>
+    <a href="#topics">Topics</a>
+  </nav>
+</div>
 
-    <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="section-kicker">THE POLICY CORNER</p>
-          <h2 id="hero-title">Ideas worth <em>thinking</em> about.</h2>
-          <p class="hero-lede">
-            A growing collection of essays that looks beyond headlines to examine institutions,
-            ideas, people, places and the forces shaping public life.
-          </p>
-          <a class="hero-cta" href="#essays">Explore the essays <span>↗</span></a>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="sun"></div>
-          <div class="dot dot-a"></div>
-          <div class="dot dot-b"></div>
-          <div class="dot dot-c"></div>
-        </div>
-      </section>
-
-      <section class="about-section" id="about" aria-labelledby="about-title">
-        <div class="section-heading">
-          <p class="section-kicker">ABOUT</p>
-          <h2 id="about-title">A corner for <span>curious minds.</span></h2>
-        </div>
-        <div class="about-grid">
-          <p class="about-lede">
-            <strong>Chinmaya Patro's Policy Corner</strong> is a space for thoughtful essays,
-            questions and conversations about the public world.
-          </p>
-          <div class="about-text">
-            <p>
-              The collection brings together policy, history, geography, climate, society,
-              international affairs, economics, ethics and literature in one accessible reading room.
-            </p>
-            <p>
-              Use the topic tags below to browse by theme, or search across the collection for a
-              particular idea, argument or keyword.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="essays-section" id="essays" aria-labelledby="essays-title">
-        <div class="section-heading essays-heading">
-          <div>
-            <p class="section-kicker">ESSAYS</p>
-            <h2 id="essays-title">The reading room.</h2>
-          </div>
-          <span class="essay-count" id="essay-count" aria-live="polite"></span>
-        </div>
-
-        <div class="topic-area" id="topics">
-          <div class="topic-label">Browse by topic</div>
-          <nav class="topic-nav" id="topic-filters" aria-label="Essay topics">
-            <button class="topic-btn active" data-topic="all">All</button>
-            <button class="topic-btn" data-topic="law">Law</button>
-            <button class="topic-btn" data-topic="environment">Environment</button>
-            <button class="topic-btn" data-topic="politics">Politics</button>
-            <button class="topic-btn" data-topic="society">Society</button>
-            <button class="topic-btn" data-topic="history-culture">History &amp; Culture</button>
-            <button class="topic-btn" data-topic="geography">Geography</button>
-            <button class="topic-btn" data-topic="environment-climate">Environment &amp; Climate Issues</button>
-            <button class="topic-btn" data-topic="social-change">Social Change</button>
-            <button class="topic-btn" data-topic="international-affairs">International Affairs</button>
-            <button class="topic-btn" data-topic="indian-politics">Indian Politics</button>
-            <button class="topic-btn" data-topic="business-economy">Business &amp; Economy</button>
-            <button class="topic-btn" data-topic="ethics-philosophy">Ethics &amp; Philosophy</button>
-            <button class="topic-btn" data-topic="books-literature">Books &amp; Literature</button>
-          </nav>
-        </div>
-
-        <div class="search-container">
-          <label class="search-label" for="search-box">Search the archive</label>
-          <div class="search-wrap">
-            <span class="search-icon" aria-hidden="true">⌕</span>
-            <input type="search" id="search-box" class="search-input" placeholder="Search by title, topic or keyword..." autocomplete="off">
-            <kbd>/</kbd>
-          </div>
-        </div>
-
-        <main class="article-grid" id="article-list" aria-live="polite">
-          <!-- Dynamic cards rendered by JS -->
-        </main>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div>
-        <strong>Chinmaya Patro's Policy Corner</strong>
-        <span>Ideas, essays &amp; public questions.</span>
-      </div>
-      <a href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;">Back to top ↑</a>
-    </footer>
+<!-- ============ HERO ============ -->
+<section class="hero site-shell">
+  <div class="hero-copy">
+    <p class="section-kicker">The Policy Corner</p>
+    <h2>Ideas worth <em>thinking</em> about.</h2>
+    <p class="hero-lede">A growing collection of essays that looks beyond headlines to examine institutions, ideas, people, places and the forces shaping public life.</p>
+    <a class="hero-cta" href="#topics">Explore the essays ↗</a>
   </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="orbit orbit-two"></div>
+    <div class="orbit"></div>
+    <div class="sun"></div>
+    <span class="dot dot-a"></span>
+    <span class="dot dot-b"></span>
+    <span class="dot dot-c"></span>
+  </div>
+</section>
 
-  <script src="js/articles-data.js"></script>
-  <script src="js/app.js"></script>
+<main>
+
+  <!-- ============ SECTION 1: ABOUT ============ -->
+  <section id="about" class="about-section">
+    <div class="site-shell">
+      <p class="section-kicker">About</p>
+      <div class="section-heading"><h2>A corner for <span>curious minds</span>.</h2></div>
+      <div class="about-grid">
+        <p class="about-lede">Chinmaya Patro's Policy Corner is a space for thoughtful essays, questions and conversations about the public world.</p>
+        <div class="about-text">
+          <p>The collection brings together policy, history, geography, climate, society, international affairs, economics, ethics and literature in one accessible reading room.</p>
+          <p>Use the topics below to browse by theme, or search the archive for a particular idea, argument or keyword.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2: ESSAYS (search entry point) ============ -->
+  <section id="essays" class="essays-section">
+    <div class="site-shell">
+      <div class="essays-heading">
+        <div>
+          <p class="section-kicker">Essays</p>
+          <div class="section-heading"><h2>The <span>reading room</span>.</h2></div>
+        </div>
+        <p class="essay-count">12 essays</p>
+      </div>
+
+      <div class="search-container">
+        <label class="search-label" for="essay-search">Search the archive</label>
+        <div class="search-wrap">
+          <span class="search-icon">⌕</span>
+          <input class="search-input" id="essay-search" type="search" placeholder="Search by title, topic or keyword">
+          <kbd>/</kbd>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3: TOPICS (articles listed topic-wise) ============ -->
+  <section id="topics" class="essays-section">
+    <div class="site-shell">
+      <p class="section-kicker">Topics</p>
+      <div class="section-heading"><h2>Browse by <span>topic</span>.</h2></div>
+
+      <div class="topic-area">
+        <p class="topic-label">Jump to a topic</p>
+        <nav class="topic-nav">
+          <a class="topic-btn" href="#topic-history">History</a>
+          <a class="topic-btn" href="#topic-geography">Geography</a>
+          <a class="topic-btn" href="#topic-polity">Polity</a>
+          <a class="topic-btn" href="#topic-diplomacy">Diplomacy</a>
+          <a class="topic-btn" href="#topic-philosophy">Philosophy</a>
+          <a class="topic-btn" href="#topic-culture">Culture</a>
+          <a class="topic-btn" href="#topic-society">Society</a>
+          <a class="topic-btn" href="#topic-ethics">Ethics</a>
+          <a class="topic-btn" href="#topic-governance">Governance</a>
+          <a class="topic-btn" href="#topic-books">Books</a>
+          <a class="topic-btn" href="#topic-literature">Literature</a>
+          <a class="topic-btn" href="#topic-misc">Misc</a>
+        </nav>
+      </div>
+
+      <!-- ---- History ---- -->
+      <div class="topic-group" id="topic-history">
+        <h3 class="topic-group-title">History</h3>
+        <div class="article-grid">
+          <!-- duplicate this card to add more essays in this topic -->
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">History</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Geography ---- -->
+      <div class="topic-group" id="topic-geography">
+        <h3 class="topic-group-title">Geography</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Geography</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Polity ---- -->
+      <div class="topic-group" id="topic-polity">
+        <h3 class="topic-group-title">Polity</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Polity</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Diplomacy ---- -->
+      <div class="topic-group" id="topic-diplomacy">
+        <h3 class="topic-group-title">Diplomacy</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Diplomacy</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Philosophy ---- -->
+      <div class="topic-group" id="topic-philosophy">
+        <h3 class="topic-group-title">Philosophy</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Philosophy</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Culture ---- -->
+      <div class="topic-group" id="topic-culture">
+        <h3 class="topic-group-title">Culture</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Culture</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Society ---- -->
+      <div class="topic-group" id="topic-society">
+        <h3 class="topic-group-title">Society</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Society</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Ethics ---- -->
+      <div class="topic-group" id="topic-ethics">
+        <h3 class="topic-group-title">Ethics</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Ethics</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Governance ---- -->
+      <div class="topic-group" id="topic-governance">
+        <h3 class="topic-group-title">Governance</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Governance</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Books ---- -->
+      <div class="topic-group" id="topic-books">
+        <h3 class="topic-group-title">Books</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Books</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Literature ---- -->
+      <div class="topic-group" id="topic-literature">
+        <h3 class="topic-group-title">Literature</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Literature</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ---- Misc ---- -->
+      <div class="topic-group" id="topic-misc">
+        <h3 class="topic-group-title">Misc</h3>
+        <div class="article-grid">
+          <article class="article-card" style="--delay:0ms">
+            <span class="article-index">01</span>
+            <div>
+              <div class="meta-header">
+                <span class="meta-topic">Misc</span><span class="meta-dot">•</span>
+                <time datetime="2026-09-01">1 Sep 2026</time><span class="meta-dot">•</span>
+                <span>6 min read</span>
+              </div>
+              <h4 class="article-title"><a href="#">Essay title goes here</a></h4>
+              <p class="article-summary">One or two line summary of the essay's argument goes here.</p>
+              <a class="read-link" href="#">Read essay <span>→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer site-shell">
+  <div>
+    <strong>Chinmaya Patro's Policy Corner</strong>
+    <span>Ideas, essays &amp; public questions.</span>
+  </div>
+  <div>
+    <strong>Contact</strong>
+    <a href="mailto:you@example.com">you@example.com</a>
+  </div>
+  <div>
+    <strong>Elsewhere</strong>
+    <a href="https://github.com/chintaduchinmaya456" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <a class="back-link" href="#top">Back to top ↑</a>
+</footer>
+
 </body>
 </html>
