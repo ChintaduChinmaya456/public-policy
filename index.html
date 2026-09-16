@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Patro's Policy Parley — Independent Policy Research & Commentary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-date" id="topbarDate"></span>
+      <span class="topbar-tagline">Independent · Non-partisan · Evidence-based</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">PP</span>
+        <span class="brand-name">Patro's Policy Parley</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#articles">Articles</a>
+        <a href="index.html#topics">Topics</a>
+        <a href="index.html#about">About</a>
+      </nav>
+      <a href="index.html#subscribe" class="btn-subscribe">Subscribe</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="eyebrow">Featured Analysis</span>
+        <h1 id="heroTitle">Loading…</h1>
+        <p id="heroExcerpt" class="hero-excerpt"></p>
+        <div class="hero-meta" id="heroMeta"></div>
+        <a id="heroLink" href="#" class="btn-primary">Read the analysis →</a>
+      </div>
+      <div class="hero-image">
+        <img id="heroImage" src="" alt="Featured article cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Areas -->
+  <section id="research" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Research Areas</h2>
+        <p>Thematic clusters guiding our inquiry.</p>
+      </div>
+      <div class="topics-grid" id="topicsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Latest Articles -->
+  <section id="articles" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Latest Articles</h2>
+        <p>Recent commentary and analysis from our contributors.</p>
+      </div>
+      <div class="article-grid" id="articleGrid"></div>
+    </div>
+  </section>
+
+  <!-- Topics Tags -->
+  <section id="topics" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Browse by Topic</h2>
+      </div>
+      <div class="tag-cloud" id="tagCloud"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section section-alt">
+    <div class="container about-grid">
+      <div class="about-photo">
+        <img src="https://images.unsplash.com/photo-1633332757620-1fd1f9ff0f5b?w=600&q=80" alt="Chinmaya Patro" />
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">About the Founder</span>
+        <h2>Chinmaya Patro</h2>
+        <p class="about-lede">Student of Geography, Delhi University · Public policy enthusiast.</p>
+        <p>
+          Chinmaya Patro is an undergraduate student at the <strong>University of Delhi</strong>,
+          pursuing a Bachelor's degree in <strong>Geography</strong>. His academic grounding in
+          spatial systems, urban morphology, and human-environment interactions informs a
+          deep interest in <strong>public policy</strong> — particularly the intersection of
+          territorial planning, welfare delivery, and environmental governance.
+        </p>
+        <p>
+          Patro's Policy Parley is his attempt to translate classroom curiosity into accessible,
+          evidence-driven commentary. The platform publishes short analytical essays, policy
+          briefs, and reviews on issues spanning urban reform, climate adaptation, federal
+          fiscal architecture, and digital governance — with an emphasis on clarity over jargon
+          and inquiry over ideology.
+        </p>
+        <div class="about-links">
+          <a href="mailto:chinmaya@example.com">Email</a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://twitter.com" target="_blank" rel="noopener">Twitter / X</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subscribe -->
+  <section id="subscribe" class="subscribe">
+    <div class="container subscribe-inner">
+      <h2>Get the weekly briefing</h2>
+      <p>One email every Friday. New analysis, curated readings, no spam.</p>
+      <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Thanks! This is a static demo form.');">
+        <input type="email" placeholder="you@example.com" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand">
+          <span class="brand-mark">PP</span>
+          <span class="brand-name">Patro's Policy Parley</span>
+        </div>
+        <p class="footer-blurb">Independent policy research and commentary from Delhi, India.</p>
+      </div>
+      <div>
+        <h4>Sections</h4>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#articles">Articles</a>
+        <a href="index.html#about">About</a>
+      </div>
+      <div>
+        <h4>Topics</h4>
+        <a href="index.html#topics">Urban Policy</a>
+        <a href="index.html#topics">Climate</a>
+        <a href="index.html#topics">Governance</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="#">Email</a>
+        <a href="#">RSS</a>
+        <a href="#">Twitter / X</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Patro's Policy Parley. All views are personal.</span>
+      <span>Hosted on GitHub Pages.</span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
